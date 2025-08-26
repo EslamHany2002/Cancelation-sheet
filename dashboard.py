@@ -3,7 +3,7 @@ import pandas as pd
 
 # Load the data
 def load_data():
-    df = pd.read_excel("Canceltion Sheet.xlsx", sheet_name="Cancelation Date (Aug)")
+    df = pd.read_excel("Canceltion Sheet.xlsx", sheet_name="Cancelation Date (Aug)", engine="openpyxl")
     df["Diploma_clean"] = df["Diploma"].astype(str).str.strip().str.lower()
     df["Status"] = df["Statues Of The Compensation"].astype(str).str.strip().str.lower()
     return df
