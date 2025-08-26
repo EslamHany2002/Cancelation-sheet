@@ -66,3 +66,9 @@ st.subheader("Instructor Cancelation & Compensation (Filtered)")
 instructor_stats = filtered_df.groupby("Instructor Name")["Status"].value_counts().unstack(fill_value=0)
 st.dataframe(instructor_stats)
 st.bar_chart(instructor_stats)
+
+import pandas as pd
+import openpyxl
+
+print("Pandas version:", pd.__version__)
+print("openpyxl version:", openpyxl.__version__)
